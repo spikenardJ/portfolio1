@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+  <!-- SIZZLE: (OVERVIEW) I made the home icon bigger with a wiggle. I also made the heart icon in the footer a tiny bit bigger with a wiggle. In addition, I made the word "extaordinary" zoom-in on hover to draw attention to it. I made the navbar transparent until scrolling with a little color change from the bootstrap dark to be more like my color pattern. My big SIZZLE, for the home page is the moving bubble border effect on my profile image, with my name pulsating with an outline and text shadow. In my "mission" section, I added a bouncy highlighted hover border effect around a secondary double border on that image. In the "Skills" section, I edited the skills-image-icons in photoshop, to give them all have a similar look and feel. In the "Contact" section, for the contact icon links, I added a zoom-in on the hover effect as well as making them change color on hover. Finally, I made sure that the color and sizes were assessable with a contrast ratio ranging from 5.51 to 15.23 including all text above 12pts. :) -->
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Jennifer Coppick's Portfolio Website</title>
+
+<!-- Bootstrap icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+<!-- Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Basic:wght@700&display=swap" rel="stylesheet">
+
+<!-- CSS Stylesheet link -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+<!-- Hero SIZZLE: My hero background is located in my style.css, but I wanted to mention that I used a picture that my daughter took. :) -->
+  <body class="scroll-top" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+<!--     Navbar / Navbar SIZZLE: I made the home icon bigger with a wiggle. I made the navbar transparent until scrolling with a little color change from the bootstrap dark to be more like my color pattern. -->
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+      <div id="container-nav" class="container">
+        <a href="#home" class="navbar-brand">
+          <span class="wiggle"><i class="bi bi-house-heart-fill"></i></span>
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav-collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav-collapse" class="collapse navbar-collapse">  
+          <div class="navbar-nav ms-auto">
+            <a href="#projects-target" class="nav-link">Projects</a>
+            <a href="#mission-target" class="nav-link">Mission</a>
+            <a href="#skills-target" class="nav-link">Skills</a>
+            <a href="#inspiration-target" class="nav-link">Inspiration</a>
+            <a href="#contact-target" class="nav-link">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<!-- Home section SIZZLE: I made the word "extaordinary" zoom-in on hover to draw attention to it. I wrapped my headshot image in a wobbly bubble effect, and I made my name pulsate in and out with a border/text shadow effect. In this section the red letters with the light blue background is the lowest contrast ratio point on my whole site, at 5.51 staying above the recommended assessibility contrast ratio guidelines min of 4.5. -->
+    <header id="home">
+      <div id="profile-image" class="container">
+        <div class="box">
+          <div class="spin-container">
+            <div class="shape">
+              <div class="bd"><img class="rounded-circle" alt="100x100" src="images/headshot.jpg" data-holder-rendered="true"></div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-12">
+            <svg class="mh6  vat  bgcred" align="center" viewBox="0 0 100 100"> 
+        <text class="px" x="50" y="65" text-anchor="middle">Jennifer Coppick</text>
+      </svg>
+          </div>
+        </div>
+      </div>
+
+    <h2><small>Finding ways to make your best...</small><br> <span class="zoom"><b>extraordinary!</b></span></h2>
+      <br>
+    </header>
+
+<!-- Projects section -->
+    <section id="projects">
+        <div id="projects-target"></div>
+        <div class="container text-center">
+          <h2 id="projects"><b>My Projects</b></h2>
+          <br>
+          
+          <div class="row">
+              <!-- E-commerce Project -->
+              <div class="col-md-6">
+                  <div class="project-card">
+                      <img src="images/ECommerce_App.png" alt="E-commerce Site" class="project-image">
+                      <h3 class="project-title">E-commerce Website</h3>
+                      <p class="project-description">
+                          A full-featured e-commerce platform with shopping cart functionality.
+                      </p>
+                      <a href="https://e-commerce-app-navy-eta.vercel.app" class="project-link" target="_blank">View Project</a>
+                  </div>
+              </div>
+              <!-- Task Management App Project -->
+              <div class="col-md-6">
+                <div class="project-card">
+                    <img src="images/Task_Management.png" alt="Task Management App" class="project-image">
+                    <h3 class="project-title">Task Management App</h3>
+                    <p class="project-description">
+                      A user-friendly and efficient tool for managing tasks effectively.
+                    </p>
+                    <a href="https://task-management-app-livid-theta.vercel.app" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+              <!-- Match Game Project -->
+              <div class="col-md-6">
+                <div class="project-card">
+                    <img src="images/Match_Card_Game.png" alt="Match Game" class="project-image">
+                    <h3 class="project-title">Memory Match Game</h3>
+                    <p class="project-description">
+                        A fun and interactive memory matching game built with JavaScript.
+                    </p>
+                    <a href="https://match-game-384evt4h6-jennifer-coppicks-projects.vercel.app" class="project-link" target="_blank">View Project</a>
+                </div>
+            </div>
+            <!-- Marvel Character Search Project -->
+            <div class="col-md-6">
+              <div class="project-card">
+                  <img src="images/Marvel_App.png" alt="Marvel Character Search App" class="project-image">
+                  <h3 class="project-title">Marvel Character API App</h3>
+                  <p class="project-description">
+                      An interactive Marvel character API app with ability to view detailed character information using React-Vite.
+                  </p>
+                  <a href="https://marvel-character-api-app.vercel.app" class="project-link" target="_blank">View Project</a>
+              </div>
+          </div>
+          </div>
+      </div>
+    </section>
+<!-- Mission section SIZZLE: I added a bouncy highlighted hover border effect around a secondary double border on the mission image. In the mission section, and throughout my site, the contrast ratio of the darker blue background with white letters is 15.23 contrast ratio. Which is way above the recommended assessibility guidelines for contrast ratio. -->
+    <section id="mission">
+      <div id="mission-target"></div>
+      <div class="container">
+        <div class="text-center">
+        <h2 id="my-mission"><b>My Mission</b></h2>
+        </div>
+        <br><br>
+          <div class="row align-items-center">
+            <div id="mission-image" class="column col-md-6 col-12">
+              <figure>
+                <blockquote class="blockquote"><img src="images/laptop.jpg" alt="Laptop-with-code" style="width:100%"></blockquote>
+                <figcaption class="blockquote-footer"><cite title="Source Title">Photo Credit: James Harrison</cite>
+                </figcaption>
+              </figure>
+            </div>
+            <div id="mission-paragraph" class="column col-md-6 col-12">
+              <p style="width:100%">My mission as a student in Web Development is to learn everything I possibly can to further my ability in coding. To me, being a good coder is being a solution finder, and task solver. It is my desire to find the best possible solutions in Web Development, not only as a student, but for my future clients. 
+              </p>
+            </div>
+          </div>
+      </div> 
+      <br><br>
+    </section>
+
+<!-- Skills section SIZZLE: I edited the skills-image-icons in photoshop, to give them all have a similar look and feel. Also, because this is the smallest text on my whole website, I made sure it was a minimum of 16px (12pts) for assessability. (Feel free to use my skills images if you want.) -->
+    <section id="skills">
+      <div id="skills-target"></div>
+      <div class="container text-center">
+        <h2 id="skills"><b>Skills</b></h2>
+        <br>
+          <div class="row align-items-center text-center">
+            <div class="col-lg-3 col-md-6 col-12">
+                <figure id="html" class="figure">
+                  <img src="images/Python.png" id="img-html" class="figure-img img-fluid rounded w-50 text-center" alt="HTML">
+                  <figcaption id="html-caption" class="figure-caption text-center">Programming websites with Python's high-level, interpreted language for readability, versatility, and extensive standard library.
+
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12">
+                <figure id="css" class="figure">
+                  <img src="images/React.png" id="img-css" class="figure-img img-fluid rounded w-50" alt="CSS">
+                  <figcaption id="css-caption" class="figure-caption text-center text-size 16px">Using React's JavaScript library for building user interfaces, and single-page applications, using a component-based architecture.
+
+                  </figcaption>
+                </figure>
+              </div> 
+            <div class="col-lg-3 col-md-6 col-12">
+              <figure id="html" class="figure">
+                <img src="images/HTML.png" id="img-html" class="figure-img img-fluid rounded w-50 text-center" alt="HTML">
+                <figcaption id="html-caption" class="figure-caption text-center">Structuring the web's content using modern semantic HTML5.</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <figure id="css" class="figure">
+                <img src="images/CSS.png" id="img-css" class="figure-img img-fluid rounded w-50" alt="CSS">
+                <figcaption id="css-caption" class="figure-caption text-center text-size 16px">Presenting beautiful web designs and interactions using modern CSS.</figcaption>
+              </figure>
+            </div> 
+            <div class="col-lg-3 col-md-6 col-12">
+              <figure id="bootstrap" class="figure">
+                <img src="images/Bootstrap.png" id="img-bootstrap" class="figure-img img-fluid rounded w-50" alt="Bootstrap">
+                <figcaption id="bootstrap-caption" class="figure-caption text-center">Rapidly developing responsive websites using the web's most popular framework.</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <figure id="js" class="figure">
+                <img src="images/JS.png" id="img-js" class="figure-img img-fluid rounded w-50" alt="Javascript">
+                <figcaption id="js-caption" class="figure-caption text-center">Making interactive experiences, games, web apps., and more using javascript.</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <figure id="excel" class="figure">
+                <img src="images/Excel.png" id="img-excel" class="figure-img img-fluid rounded w-50" alt="Excel">
+                <figcaption id="excel-caption" class="figure-caption text-center">Spreadsheet program used to record and analyze numerical and statistical data.</figcaption>
+              </figure>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <figure id="tableau" class="figure">
+                <img src="images/Tableau.png" id="img-tableau" class="figure-img img-fluid rounded w-50" alt="Tableau">
+                <figcaption id="tableau-caption" class="figure-caption text-center">Modern Data Visualization tool for creative interactive graphs and charts used for business intelligence.</figcaption>
+              </figure>
+            </div>
+          </div>
+        <br>
+      </div>
+    </section>
+
+<!-- Inspiration section SIZZLE: I added text shadowing to lift the words off of the images a bit and edited my images in photoshop to clean them up a little. I am doing my best to keep assessibility guidelines throughout. -->
+    <section id="inspiration">
+      <div id="inspiration-target"></div>
+        <div class="container text-center">
+          <h2 id="inspiration"><b>Inspiration</b></h2>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-interval="false">
+         <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+         </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/Steve-Jobs.jpg" class="d-block w-100" alt="Steve-Jobs">
+            <div class="carousel-caption d-md-block">
+              <h3>The people who are crazy enough to think they can change the world<br> <b>are the ones who do.</b></h3>
+              <h6>- Steve Jobs</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/Amelia-Earhart.jpg" class="d-block w-100" alt="Amelia-Earhart">
+            <div class="carousel-caption d-md-block">
+            <h3>The most difficult thing is the decision to act,<br> <b>the rest is merely tenacity.</b></h3>
+            <h6>- Amelia Earhart</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/Samwise-Gamgee.jpg" class="d-block w-100" alt="Samwise">
+          <div class="carousel-caption d-md-block">
+            <h3>There is some good in this world,<br> <b>and it's worth fighting for.</b></h3>
+            <h6>- Samwise Gamgee</h6>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+    </section>
+
+<!-- Contact section SIZZLE: For the contacts icons, I added a zoom-in on hover effect as well as making them change color on hover.  -->
+    <section id="contact">
+      <div id="contact-target"></div>
+      <div class="container text-center container-fluid">
+        <h2 id="contact"><b>Contact</b></h2>
+        <br>
+        <div class="row align-items-center">
+          <div class="col-md-4 col-12">
+            <h3 id="linkedin"><a href="https://www.linkedin.com/in/jennifercoppick/" target=”_blank”><span class="zoom"><i class="bi bi-linkedin"></i></span></a></h3>
+          </div>
+          <div class="col-md-4 col-12">
+            <h3 id="email"><a href="mailto:jennifer_annette@hotmail.com" target=”_blank”><span class="zoom"><i class="bi bi-envelope-paper-heart"></i></span></a></h3>
+          </div>
+          <div class="col-md-4 col-12">
+            <h3 id="instagram"><a href="https://www.instagram.com/jencoppick/" target=”_blank”><span class="zoom"><i class="bi bi-instagram"></i></span></a></h3>
+          </div>
+        </div>
+        <br>
+      </div>
+    </section>
+
+<!-- Footer SIZZLE: I made the heart emoji larger with a little wiggle. I tried to keep all my animations so that they were noticeable but not annoyingly distracting.  -->
+      <footer>
+        <div id="copyright" class="text-center p-3" style="background-color: rgb(6, 40, 61)">© Jennifer Coppick 2025  <span id="heart" class="wiggle">♡</span>
+        </div>
+      </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

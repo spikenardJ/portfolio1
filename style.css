@@ -1,0 +1,456 @@
+/* SIZZLE: I made the home icon bigger with a wiggle. I also made the heart icon in the footer a tiny bit bigger with a wiggle. In addition, I made the word "extaordinary" zoom-in on hover to draw attention to it. I made the navbar transparent until scrolling with a little color change from the bootstrap dark to be more like my color pattern. My big SIZZLE, for the home page is the moving bubble border effect on my profile image, with my name pulsating with an outline and text shadow. In my "mission" section, I added a bouncy highlighted hover border effect around a secondary double border on that image. In the "Skills" section, I edited the skills-image-icons in photoshop, to give them all have a similar look and feel. In the "Contact" section, for the contact icon links, I added a zoom-in on the hover effect as well as making them change color on hover. Finally, I made sure that the color and sizes were assessable with a contrast ratio ranging from 5.51 to 15.23 including all text above 12pts. :) */
+
+body {
+    position: relative;
+  }
+  
+  title {
+  display: none;
+  }
+  
+  .navbar-dark {
+    background-color: #06283D;
+    font-size: 20px;
+  }
+  
+  i {
+    font-size: 1.5em;
+  }
+  
+  .wiggle {
+    animation-name: wiggle-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wiggle-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+  #heart {
+    font-size: 1.5em;
+  }
+  
+  .zoom {
+    background-color: transparent;
+    display: inline-block;
+    padding: 20px;
+    margin: 0 10px;
+    transition-duration: .4s;
+    color: white;
+    text-shadow: 3px 3px 7px #06283D;
+    font-family: Georgia,serif;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.4);
+  }
+  
+  .zoom .bi {
+    display: inline-block;
+  }
+  
+  .zoom .bi:hover {
+    color: #9BA3EB;
+    text-shadow: 3px 3px 3px #06283D;
+  }
+  
+  header#home {
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),
+      url("images/background1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 6px 8px #06283D;
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  #small-screens {
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)),
+      url("images/background-zoomed.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 6px 8px #06283D;
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .rounded-circle {
+    border-radius: 50% !important;
+    border-width: 8px;
+    border-style: ridge;
+    border-color: #06283D;
+    padding: 0%;
+    margin: 0;
+    width: 20vw !important;
+    height: auto;
+    margin-top: 20vh;
+  }
+  
+  #profile-image .container {
+    display: block;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .box {
+    display: block;
+    width: 60vmin;
+    height: 60vmin;
+    position: relative;
+    margin: auto;
+  }
+  .box::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    transform: scale(1.42);
+  }
+  
+  .spin-container {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: spin 9s linear infinite;
+            animation: spin 9s linear infinite;
+    position: relative;
+  }
+  
+  .shape {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    -webkit-animation: morph 4s ease-in-out infinite both alternate;
+            animation: morph 4s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .bd {
+    width: 142%;
+    height: 142%;
+    position: absolute;
+    left: -21%;
+    top: -21%;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.4)), url("images/background-zoomed.png");
+    background-size: 100%;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 12s linear infinite reverse;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  @-webkit-keyframes morph {
+    0% {
+        border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
+    }
+    100% {
+        border-radius: 40% 60%;
+    }
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 40% 60% 60% 40%/60% 30% 70% 40%;
+    }
+    100% {
+        border-radius: 40% 60%;
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+  
+  h1 .display2 {
+    display: block;
+    font-family: Georgia,serif;
+    font-size: 85px;
+    font-weight: normal;
+    letter-spacing: -3.5px;
+    line-height: 1em;
+   }
+  
+  
+  svg {
+    font: bold 90px 'Playfair Display', serif;
+    width: 100%;
+    height: 11vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  text {
+    fill: #A80C1E;
+    stroke: black;
+    stroke-width: .3px;
+    stroke-linejoin: round;
+    animation: 4s pulsate infinite;
+  }
+  
+  @keyframes pulsate {
+    50%{ stroke-width:5px }
+  }
+  
+  h2 {
+    color: white;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  
+  h3 {
+    color: white;
+    margin-bottom: 35px;
+    text-align: center;
+    text-shadow: 3px 3px 7px #06283D;
+  }
+  
+  h6 {
+    color: white;
+    margin-bottom: 35px;
+    text-align: center;
+    text-shadow: 3px 3px 7px #06283D;
+  }
+  
+  p {
+    text-size-adjust: 16px;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  section#mission {
+    background-color: #06283D;
+    color: white;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+    padding: 20px;
+  }
+  
+  div#mission-image {
+    border-color: white;
+    border: 5px;
+    border-style: double;
+  }
+  
+  div#mission-image:hover {
+    cursor: pointer;
+    border-color: white;
+    border: 5px;
+    border-style: double;
+    box-shadow: 0 0 0 10px #9BA3EB;
+    animation: bounceOut .4s linear;
+  }
+  
+  @keyframes bounceOut {
+    0% {
+      box-shadow: 0 0 0 4px #9BA3EB;
+      opacity: 1;
+    }
+    25% {
+      box-shadow: 0 0 0 1px #9BA3EB;
+      opacity: 1;
+    }
+    50% {
+      box-shadow: 0 0 0 7px #9BA3EB;
+      opacity: 1;
+    }
+    75% {
+      box-shadow: 0 0 0 4px #9BA3EB;
+      opacity: 1;
+    }
+    100% {
+      box-shadow: 0 0 0 5px #9BA3EB;
+      opacity: 1;
+    }
+  }
+  
+  div#mission-paragraph {
+    font-size: 22px;
+    padding: 40px;
+  }
+  
+  section#skills {
+    background-color: #DFF6FF;
+  }
+
+  section#projects {
+    background-color: #DFF6FF;
+  }
+  
+  section#inspiration {
+    background-color: #06283D;
+  }
+  
+  section#contact {
+    background-color: #DFF6FF;
+  }
+  
+  a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: inherit;
+  }
+  
+  #mission-target, #skills-target, #inspiration-target, #contact-target, #projects-target {
+    position: relative;
+    top: -100px;
+  }
+  
+  .scroll-top .navbar {
+    background-color: transparent !important;
+  }
+  
+  .carousel-item img{
+    object-fit: cover;
+    object-position: center;
+    height: 50vh;
+    overflow: hidden;
+  }
+  
+  .carousel-item:after {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.2);
+  }
+  
+  .carousel-caption {
+    z-index: 1;
+  }
+  
+  h2#skills {
+    color: #06283D;
+  }
+
+  h2#projects {
+    color: #06283D;
+    margin-bottom: 35px;
+    text-align: center;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  h2#contact {
+    color: #06283D;
+  }
+  
+  h2#my-mission {
+    color: white;
+  }
+  
+  h2#inspiration {
+    color: white;
+  }
+  
+  #copyright {
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  section#projects {
+    background-color: #DFF6FF;
+    padding: 40px 0;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .project-title {
+    color: #1B4F76;
+    margin: 15px 0;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  }
+  
+  .project-description {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #06283D;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #717aca;
+    color: white;
+    border: 2px solid #1B4F76;
+  }
